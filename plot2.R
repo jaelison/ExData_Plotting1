@@ -8,18 +8,18 @@
 
 	# Load dataset
 		epcOriginal = read.table("household_power_consumption.txt", header=TRUE, sep=";") 
-		View(epcOriginal)
+		#View(epcOriginal)
 	# Create a new dataset to apply data filters
 		epcSubset = epcOriginal 
 		# Update the date variable	
-		epcSubset$Date = as.Date(epcSubset $Date,  format="%d/%m/%Y")
+		epcSubset$Date = as.Date(epcSubset$Date,  format="%d/%m/%Y")
 		# Update the time variable
-		epcSubset $Time = strptime(epcSubset $Time, "%H:%M:%S")
+		epcSubset$Time = strptime(epcSubset$Time, "%H:%M:%S")
 	# Filter from the origianl dataset dates "2007-02-01" and "2007-02-02"
 		epc = subset(epcSubset, Date=="2007-02-01" | Date=="2007-02-02")
 
 	# Write the filtered file for future use
-		write.csv(epcfiltered, "epc.csv")
+		write.csv(epc, "epc.csv")
 
 #######################################################
 ### Use the code below to load the adjusted dataset ###
