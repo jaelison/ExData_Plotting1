@@ -57,7 +57,7 @@
 	plot(epc$Sub_metering_1 ~ epc$DateTime , type="o", pch=21, cex=0, xlab="", ylab="Energy sub metering")
 	points(epc$Sub_metering_2 ~ epc$DateTime , type="o", pch=21, cex=0, xlab="", ylab="", col="red")
 	points(epc$Sub_metering_3 ~ epc$DateTime , type="o", pch=21, cex=0, xlab="", ylab="", col="blue")
-	legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lwd=2, col=c("black","red","blue"))
+	legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lwd=2, col=c("black","red","blue"), bty=0)
 	plot(epc$DateTime, epc$Global_reactive_power, type="o", pch=21, cex=0, xlab="datetime", ylab="Global_reactive_power")
 
 	png(file = "plot4.png",width = 480, height = 480)
@@ -67,9 +67,8 @@
 	plot(epc$Sub_metering_1 ~ epc$DateTime , type="o", pch=21, cex=0, xlab="", ylab="Energy sub metering")
 	points(epc$Sub_metering_2 ~ epc$DateTime , type="o", pch=21, cex=0, xlab="", ylab="", col="red")
 	points(epc$Sub_metering_3 ~ epc$DateTime , type="o", pch=21, cex=0, xlab="", ylab="", col="blue")
-	legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lwd=2, col=c("black","red","blue"))
+	legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lwd=2, col=c("black","red","blue"), bty=0)
 	plot(epc$DateTime, epc$Global_reactive_power, type="o", pch=21, cex=0, xlab="datetime", ylab="Global_reactive_power")
 	dev.off()
-
 
 
